@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane styleClass="root" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.adb.ADBController">
+    <center>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    prefHeight="400.0" prefWidth="600.0">
+            <children>
+
+                <HBox fx:id="h_box" alignment="CENTER" layoutX="50.0" layoutY="50.0">
+
+                    <Button fx:id="btn_check_device" onAction="#onCheckDevice" text="查找连接设备"/>
+
+                    <Label fx:id="label_device">
+                        <HBox.margin>
+                            <Insets left="25.0"/>
+                        </HBox.margin>
+                    </Label>
+                </HBox>
+
+                <Button layoutX="50.0" layoutY="100.0" onAction="#onScreenCapture" text="截图"/>
+
+                <HBox alignment="CENTER" layoutX="50.0" layoutY="150.0">
+
+                    <Button onAction="#onScreenRecord" text="录屏"/>
+
+                    <Label text="时间:">
+                        <HBox.margin>
+                            <Insets left="25.0"/>
+                        </HBox.margin>
+                    </Label>
+
+                    <TextField fx:id="txt_record_time" prefWidth="50" text="5"/>
+
+                    <Label text="s"/>
+
+                    <Label text="比特率:">
+                        <HBox.margin>
+                            <Insets left="25.0"/>
+                        </HBox.margin>
+                    </Label>
+
+                    <TextField fx:id="txt_record_date" prefWidth="50" text="4000000"/>
+
+                    <Label text="s"/>
+
+                    <Label text="进度:">
+                        <HBox.margin>
+                            <Insets left="25.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <ProgressBar fx:id="pb_record" progress="0"/>
+
+                </HBox>
+
+                <HBox alignment="CENTER" layoutX="50.0" layoutY="200.0">
+
+                    <Button fx:id="btn_logcat" onAction="#onLogcat" text="开始记录日志"/>
+                </HBox>
+
+            </children>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="10.0" layoutY="10.0" text="运行结果:"/>
+                <TextArea fx:id="ta_logcat" layoutX="10.0" layoutY="30.0" prefHeight="150" prefWidth="520"/>
+                <Button fx:id="btn_logcat_delete" layoutX="540" layoutY="30" onAction="#onLogcatDelete" text="清除"/>
+            </children>
+        </AnchorPane>
+    </bottom>
+
+    <stylesheets>
+        <URL value="@ADB.css"/>
+    </stylesheets>
+</BorderPane>

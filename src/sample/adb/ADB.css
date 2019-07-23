@@ -1,0 +1,26 @@
+
+root {
+    display: block;
+}
+
+.root {
+    -fx-background-color: #3c3f40;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+.text-area {
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.text-area .content {
+    -fx-background-color: #2b2b2b;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.Circle?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.login.LoginController"
+            prefHeight="350.0" prefWidth="300.0">
+
+    <ImageView fx:id="iv_header" layoutX="100" layoutY="50"/>
+
+    <TextField fx:id="tf_login_id" layoutX="50" layoutY="200" promptText="输入账号"/>
+
+    <TextField fx:id="tf_login_pwd" layoutX="50" layoutY="250" promptText="输入密码"/>
+
+    <stylesheets>
+        <URL value="@Login.css"/>
+    </stylesheets>
+</AnchorPane>
